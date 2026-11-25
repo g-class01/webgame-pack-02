@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+(function() {
+    function dummyBreak(fn) {
+        if (typeof fn === 'function') fn();
+        return Promise.resolve(true);
+    }
+    window.commercialBreak = window.commercialBreak || dummyBreak;
+    window.rewardedBreak = window.rewardedBreak || dummyBreak;
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.commercialBreak = window.parent.commercialBreak || dummyBreak;
+            window.parent.rewardedBreak = window.parent.rewardedBreak || dummyBreak;
+        }
+        if (window.top && window.top !== window) {
+            window.top.commercialBreak = window.top.commercialBreak || dummyBreak;
+            window.top.rewardedBreak = window.top.rewardedBreak || dummyBreak;
+        }
+    } catch(e) {}
+})();
+</script>
+  <script>window.open = function () {}; window.NOSW = true;</script>
+  <script src="poki-sdk.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Dragon Simulator 3D - Poki</title>
+	<script>
+	window.config = {
+		loader: 'unity-2020',
+		debug: false,
+		maxRatio: 24 / 9,
+		minRatio: 9 / 24,
+
+		title: 'Dragon Simulator 3D',
+		thumbnail: 'cover.jpg',
+		numScreenshots: 4,
+
+		unityVersion: '2022.3.62f2',
+		unityWebglBuildUrl: '',
+
+		fileSize: 37,
+		cachedDecompressedFileSizes: {
+			'236ca43eb0dbc47d5f8ce65817a3785e.loader.js': 21122,
+			'413c8e5df13c70beecf5b3eabd949759.data': 43015655,
+			'45669f16cdd369886a7e72ed88adbaaf.framework.js': 384820,
+			'96554658fdfe4758ef3902c5d1bab2b1.symbols.json': 7461485,
+			'bd8de5717421a932dea273dbe194b989.wasm': 22782721,
+		},
+		"metadata": {
+			"poki_template_version": 1,
+			"background_color": "#FFFFFF",
+			"background_filename": "1a5b2b835b762063603c154c9f5c75a1.jpg",
+			"code_filename": "bd8de5717421a932dea273dbe194b989.wasm",
+			"company_name": "CyberGoldfinch",
+			"data_filename": "413c8e5df13c70beecf5b3eabd949759.data",
+			"development_player": "false",
+			"framework_filename": "45669f16cdd369886a7e72ed88adbaaf.framework.js",
+			"height": "600",
+			"loader_filename": "236ca43eb0dbc47d5f8ce65817a3785e.loader.js",
+			"product_name": "Dragon Simulator 3D",
+			"product_version": "1.1070",
+			"splash_screen_style": "Dark",
+			"symbols_filename": "96554658fdfe4758ef3902c5d1bab2b1.symbols.json",
+			"unity_version": "2022.3.62f2",
+			"use_data_caching": "false",
+			"use_threads": "false",
+			"use_wasm": "true",
+			"use_webgl_1_0": "false",
+			"use_webgl_2_0": "true",
+			"width": "960"
+		}
+	};
+	</script>
+</head>
+<body>
+	<script src="unity-2020.js"></script>
+</body>
+</html>

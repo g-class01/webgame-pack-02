@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+(function() {
+    function dummyBreak(fn) {
+        if (typeof fn === 'function') fn();
+        return Promise.resolve(true);
+    }
+    window.commercialBreak = window.commercialBreak || dummyBreak;
+    window.rewardedBreak = window.rewardedBreak || dummyBreak;
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.commercialBreak = window.parent.commercialBreak || dummyBreak;
+            window.parent.rewardedBreak = window.parent.rewardedBreak || dummyBreak;
+        }
+        if (window.top && window.top !== window) {
+            window.top.commercialBreak = window.top.commercialBreak || dummyBreak;
+            window.top.rewardedBreak = window.top.rewardedBreak || dummyBreak;
+        }
+    } catch(e) {}
+})();
+</script>
+  <script>window.open = function () {}; window.NOSW = true;</script>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Scary Teacher 3D - Poki</title>
+  <script src="poki-sdk.js"></script>
+	<script>
+	window.config = {
+		loader: 'unity-2020',
+		debug: false,
+		maxRatio: 24 / 9,
+		minRatio: 9 / 24,
+
+		title: 'Scary Teacher 3D',
+		thumbnail: 'https:\/\/img.poki-cdn.com\/ef999c8420c11a5243237168e8128d5d.png',
+		numScreenshots:  4 ,
+
+		unityVersion: '6000.3.23f1',
+		unityWebglBuildUrl: '',
+
+		fileSize:  23 ,
+		cachedDecompressedFileSizes: {
+			'27e656f968c48f6770d81e83c7cdca1e.data.unityweb':  14055882 ,
+			'66ee2c1a0272d5022ca0c3aa9ebb68f1.wasm.unityweb':  9011654 ,
+			'7bfa7ffa51e330434e8640be046ef04f.loader.js':  66345 ,
+			'f47b3c7910d030c7d1c7edcb1504a211.framework.js.unityweb':  107252 ,
+		},
+		"metadata": {"poki_template_version":1,"background_color":"#231F20","code_filename":"66ee2c1a0272d5022ca0c3aa9ebb68f1.wasm.unityweb","company_name":"znk","data_filename":"27e656f968c48f6770d81e83c7cdca1e.data.unityweb","decompression_fallback":"Brotli","development_player":"false","framework_filename":"f47b3c7910d030c7d1c7edcb1504a211.framework.js.unityweb","height":"600","loader_filename":"7bfa7ffa51e330434e8640be046ef04f.loader.js","product_name":"Scary Teacher 3D","product_version":"2.5","splash_screen_style":"Dark","unity_version":"6000.3.23f1","use_data_caching":"true","use_threads":"false","use_wasm":"true","use_webgl_1_0":"false","use_webgl_2_0":"true","width":"960"}
+	};
+	</script>
+<!-- will be copied to the resulting head //-->
+</head>
+<body>
+	<script src="unity-2020.js"></script>
+<!-- will be copied to the resulting body //-->
+<!-- will also be copied to the resulting body //-->
+</body>
+</html>
